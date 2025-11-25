@@ -60,6 +60,10 @@ console.log(15 % 5);
 
 /**Exercice7**/
 
+for(let i = 44000; i <=49999; i++){
+    console.log(i)
+}
+
 
 /**Exercice 8**/
 
@@ -71,6 +75,8 @@ if (cheval >=0 && cheval<19){
     console.log ("ne pas afficher")
 }
 
+
+/**Exercice9**/
 
 
 
