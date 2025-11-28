@@ -78,9 +78,9 @@ let nombresTableau = [1, 2, 3, 4, 5];
 
 function nombresPairs(tableau) {
   let pairs = [];
-  for (let nombres of tableau) {
-    if (nombres % 2 == 0) {
-      pairs.push(nombres);
+  for (let nombre of tableau) {
+    if (nombre % 2 === 0) {
+      pairs.push(nombre);
     }
   }
   return pairs;
@@ -95,16 +95,93 @@ console.log(nombresPairs(nombresTableau));
 // Indice : Utilisez une boucle for...in pour parcourir les propriétés de l'objet.
 
 let objet = {
-  propriétés1: clés,
-  propriétés2: clés,
+  cle1: "Sophie",
+  cle2: "lyon",
+  cle3: 29,
 };
 
 function compterProprietes(objet) {
-  for (let clé in objet) {
-    
+  let compteur = 0;
+  for (let cle in objet) {
+    compteur++;
   }
 
-  return objet;
+  return compteur;
 }
 
 console.log(compterProprietes(objet));
+
+/**Exercice 8**/
+
+// Exercice 8 : Convertir un tableau d'objets en un tableau de valeurs
+// Supposons que vous avez un tableau d'objets représentant des produits :
+// let produits = [
+//  { nom: "Stylo", prix: 2 },
+//  { nom: "Cahier", prix: 5 },
+//  { nom: "Gomme", prix: 1 }
+// ];
+// Écrivez une fonction extraireNoms(produits) qui retourne un tableau contenant
+// uniquement les noms des produits.
+
+let produitsObj = [
+  { nom: "Stylo", prix: 2 },
+  { nom: "Cahier", prix: 5 },
+  { nom: "Gomme", prix: 1 },
+];
+
+function extraireNoms(produits) {
+  let names = [];
+  for (const produit of produits) {
+    names.push(produit.nom);
+  }
+
+  return names;
+}
+
+console.log(extraireNoms(produitsObj));
+
+//Autres manières plus simple d'écrire des foncions
+
+// const extraireNoms = tableau => tableau.map(produit => produit.nom);
+
+// function extraireNoms(tableau) {
+//   return tableau.map(function(produit) {
+//     return produit.nom;
+//   })
+
+//**Exercice9***
+
+// Créez une fonction factorielle(n) qui calcule et retourne la factorielle d'un
+// nombre entier positif n en utilisant une boucle.
+// Indice : La factorielle de n (notée n!) est le produit de tous les entiers de 1 à n.
+
+const factoNumber = "n";
+
+function factorielle(n) {
+  let numbers = 1;
+  for (let number of n) {
+    if (n === 0 || n === 1) {
+      resultat = resultat * numbers;
+    }
+  }
+  return numbers;
+}
+
+console.log(factorielle(number));
+
+/**Exercice 10 **/
+// Écrivez une fonction estTrie(tableau) qui retourne true si les éléments du
+// tableau sont triés en ordre croissant, false sinon.
+
+const nbrCroissant = [1, 42, 23];
+
+function estTrue(tableau) {
+    if(nbrCroissant.sort(tableau)) {
+      console.log("true")
+    }else {
+      console.log("false")
+    }
+    return nbrCroissant;
+  }
+
+console.log(estTrue(nbrCroissant))
